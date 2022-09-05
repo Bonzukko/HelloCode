@@ -3,7 +3,7 @@ int n = array.Length; // внутри массива array есть информ
 int find = 18;
 int index = 0;
 
-while (index < n)
+while (index < n) // пока индекс меньше n - цикл будет выполняться
 {
   if (array[index] == find) // если значение array c данным index  строго совпало ( == это знак равно в программировании)
     {
