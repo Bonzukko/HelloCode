@@ -1,20 +1,21 @@
-﻿void FillArray (int[] collection) // void - это метод, который ничего не возвращает. следовательно, в конце нельзя добавлять команду return
+﻿void FillArray (int[] collection) // ЭТОТ МЕТОД БУДЕТ ЗАПОЛНЯТЬ НАШ МАССИВ
+// void - это метод, который ничего не возвращает. следовательно, в конце нельзя добавлять команду return. Мы дали ему название FillArray ( в переводе с англ. - заполнить массив). В качестве аргумента принимается какая-то коллекция(collection) - это всё произвольные названия
 {
-    int length = collection.Length;
-    int index = 0;
-    while (index < length)
+    int length = collection.Length; // получаем длину массива (присваиваем ей название length(длина)) с помощью специальной команды .Length - например collection.Length;
+    int index = 0; 
+    while (index < length) //  пока индекс меньше длины масива
     {
-        collection [index] = new Random(). Next(1,10); // обращение к аргументу collection  на позицию index и положить туда новое случайное целое число из диапазона от 1 до 10
+        collection [index] = new Random(). Next(1,10); // обращение к аргументу collection  на позицию index и положить туда новое случайное целое число из диапазона от 1 до 9
         index++;
     }
 }
-void PrintArray (int[] col)
+void PrintArray (int[] col) // это метод будет печатать массив. НЕ НАДО ДАВАТЬ АРГУМЕНТАМ ОДИНАКОВЫЕ ИМЕНА, поэтому здесь  имя не коллекшн, а кол
 {
-    int count = col.Length;
+    int count = col.Length; // количество элементов
     int position = 0;
     while (position < count)
     {
-        Console.WriteLine(col[position]);
+        Console.WriteLine(col[position]); // выводим на экран значение текущей позиции
         position++;
     }
 }
@@ -25,13 +26,13 @@ int IndexOf(int[] collection, int find)
 {
     int count = collection.Length;
     int index = 0;
-    int position = -1;
+    int position = -1; // будет отражаться в консоли, если в массиве не будет искомого числа
     while (index < count)
     {
         if (collection [index] == find)
         {
          position = index;
-         break;     
+         break;     // прерывает цикл после первого нахождения - без этой команды будет показывать последнюю позицию
         }
          index++;
     } 
